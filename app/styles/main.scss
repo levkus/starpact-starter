@@ -21,8 +21,13 @@ main {
   color: DEEPPINK;
   border: none;
   padding: 0;
+  margin-bottom: 20px;
 
   &:focus {
     outline: none;
   }
+}
+
+.static {
+  color: DEEPPINK;
 }

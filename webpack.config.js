@@ -7,7 +7,7 @@ const HtmlPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const CleanPlugin = require('clean-webpack-plugin')
-const { StatsWriterPlugin } = require('webpack-stats-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const parts = require('./webpack.parts')
 
@@ -76,7 +76,13 @@ const commonConfig = merge([
       new HtmlPlugin({
         template: './index.pug'
       }),
-      new FriendlyErrorsPlugin()
+      new FriendlyErrorsPlugin(),
+      new CopyWebpackPlugin([
+        {
+          from: 'static',
+          to: 'files'
+        }
+      ])
     ],
     module: {
       noParse: /\.min\.js/
@@ -111,7 +117,6 @@ const productionConfig = merge([
       maxAssetSize: 450000 // in bytes
     },
     plugins: [
-      new StatsWriterPlugin({ fields: null, filename: '../stats.json' }),
       new webpack.HashedModuleIdsPlugin(),
       new ManifestPlugin(),
       new CleanPlugin()
