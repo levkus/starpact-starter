@@ -1,6 +1,28 @@
+@import 'utils/normalize';
+@import 'utils/mixins';
 @import 'fonts';
+@import 'starmodal';
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: cornflowerblue;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.poo {
+  background-color: transparent;
+  color: DEEPPINK;
+  border: none;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
 }

@@ -3,22 +3,19 @@ module.exports = {
     browser: true,
     commonjs: true,
     es6: true,
-    node: true
+    node: true,
   },
   plugins: ['import', 'promise', 'compat', 'node'],
-  extends: [
-    'plugin:promise/recommended',
-    'standard'
-  ],
+  extends: ['plugin:promise/recommended', 'standard'],
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module',
-    ecmaVersion: 9,
+    ecmaVestion: 8,
     ecmaFeatures: {
       sourceType: 'module',
-      jsx: true
+      jsx: true,
     },
-    allowImportExportEverywhere: true
+    allowImportExportEverywhere: true,
   },
   rules: {
     'promise/always-return': 0,
@@ -33,6 +30,7 @@ module.exports = {
     'import/default': 2,
     'import/export': 2,
     'no-console': 1,
-    'curly': 0
-  }
+    curly: 0,
+    'no-unused-vars': 1,
+  },
 }

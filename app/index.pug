@@ -1,9 +1,19 @@
+include ../node_modules/bemto.pug/bemto.pug
+
+-
+  set_bemto_settings({
+    prefix: '',
+    element: '__',
+    modifier: '--'
+  })
+
 doctype html
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Document
+    title Starpact Dev
   body
-    include includes/header.pug
+    include includes/main.pug
+    include includes/modals.pug

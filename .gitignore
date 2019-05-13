@@ -27,7 +27,6 @@ yarn-error.log*
 #Build generated
 dist/
 build/
-stats.json
 
 ### SublimeText ###
 # cache files for sublime text

@@ -5,7 +5,6 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const HtmlPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-const StylelintPlugin = require('stylelint-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const CleanPlugin = require('clean-webpack-plugin')
 const { StatsWriterPlugin } = require('webpack-stats-plugin')
@@ -77,8 +76,7 @@ const commonConfig = merge([
       new HtmlPlugin({
         template: './index.pug'
       }),
-      new FriendlyErrorsPlugin(),
-      new StylelintPlugin(lintStylesOptions)
+      new FriendlyErrorsPlugin()
     ],
     module: {
       noParse: /\.min\.js/
