@@ -1,6 +1,6 @@
 # Webpack Pug SCSS Boilerplate
 
-A webpack 4 based boilerplate for building web apps.
+A fork of [@alexnoz](https://github.com/alexnoz) webpack 4 based boilerplate for building web apps.
 
 ## Features:
 * [Pug](https://pugjs.org) as a template engine
@@ -10,9 +10,10 @@ A webpack 4 based boilerplate for building web apps.
   * [node](https://github.com/mysticatea/eslint-plugin-node)
   * [promise](https://github.com/xjamundx/eslint-plugin-promise)
   * [compat](https://github.com/amilajack/eslint-plugin-compat)
-* CSS linting with [Stylelint](http://stylelint.io)
-
->Note: There is also the [feature/modern-bundle](https://github.com/alexnoz/webpack-pug-scss-boilerplate/tree/feature/modern-bundle) branch where `webpack` produces [two production bundles](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) (legacy & modern). It is experimental so use it with caution.
+* Auto-format with [Prettier](https://prettier.io/)
+* BEM mixins: [Bemto](https://github.com/kizu/bemto)
+* Support for [postcss-sorting](https://github.com/hudochenkov/postcss-sorting)
+* Dockerfile for building Docker images that serve builds
 
 ## Usage:
 * Clone the repo via `git clone https://github.com/alexnoz/webpack-pug-scss-boilerplate.git`
